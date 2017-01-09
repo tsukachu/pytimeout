@@ -1,0 +1,17 @@
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Python
+__pycache__/
+*.py[cod]
+
+# virtualenv
+.venv/
