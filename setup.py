@@ -3,6 +3,10 @@
 from setuptools import find_packages
 from setuptools import setup
 
+tests_require = [
+    'coverage',
+]
+
 setup(
     name='pytimeout',
     version='0.0.1',
@@ -29,4 +33,7 @@ setup(
         'Topic :: Utilities',
     ],
     packages=find_packages(),
+    extras_require={
+        'testing': tests_require,
+    },
 )
