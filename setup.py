@@ -5,6 +5,7 @@ from setuptools import setup
 
 tests_require = [
     'coverage',
+    'codeclimate-test-reporter',
 ]
 
 setup(
