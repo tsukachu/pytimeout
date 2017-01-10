@@ -22,6 +22,19 @@ class TestPytimeout(unittest.TestCase):
 
         self.assertTrue(func())
 
+    def test_with_run(self):
+        def func():
+            time.sleep(1.1)
+
+        with self.assertRaises(TimeoutError):
+            pytimeout.with_run(1, func)
+
+    def test_with_run_not_raise(self):
+        def func():
+            return True
+
+        self.assertTrue(pytimeout.with_run(1, func))
+
 
 if __name__ == '__main__':
     unittest.main()
