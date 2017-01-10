@@ -1,4 +1,5 @@
 # pytimeout
+[![Build Status](https://travis-ci.org/tsukachu/pytimeout.svg?branch=master)](https://travis-ci.org/tsukachu/pytimeout)
 
 ## Description
 This package provides developers with a minimal timeout handling.  
