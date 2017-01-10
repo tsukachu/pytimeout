@@ -2,11 +2,9 @@ language: python
 python:
   - "3.6"
 env:
-  - CODECLIMATE_REPO_TOKEN 9cfc2ed7cc9ded9ba7fb8e480524cc00f4bf34b50aca1e560ecebced473c824f
-# command to install dependencies
+  - CODECLIMATE_REPO_TOKEN=9cfc2ed7cc9ded9ba7fb8e480524cc00f4bf34b50aca1e560ecebced473c824f
 install: "pip install .[testing]"
-# command to run tests
 script: coverage run tests/test_pytimeout.py
 after_success:
-  - coverage run tests/test_pytimeout.py
+  - coverage run setup.py test
   - codeclimate-test-reporter
