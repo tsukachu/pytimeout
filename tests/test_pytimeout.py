@@ -15,6 +15,13 @@ class TestPytimeout(unittest.TestCase):
         with self.assertRaises(TimeoutError):
             func()
 
+    def test_timeout_not_raise(self):
+        @pytimeout.timeout(1)
+        def func():
+            return True
+
+        self.assertTrue(func())
+
 
 if __name__ == '__main__':
     unittest.main()
