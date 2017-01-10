@@ -12,11 +12,11 @@ def timeout(sec):
                 raise TimeoutError
 
             signal.signal(signal.SIGALRM, handler)
-            signal.alarm(sec)
+            signal.setitimer(signal.ITIMER_REAL, sec)
             try:
                 return func(*args, **kwargs)
             finally:
-                signal.alarm(0)
+                signal.setitimer(signal.ITIMER_REAL, 0)
         return wrapper
     return deco
 
@@ -26,8 +26,8 @@ def with_run(sec, func, *args, **kwargs):
         raise TimeoutError
 
     signal.signal(signal.SIGALRM, handler)
-    signal.alarm(sec)
+    signal.setitimer(signal.ITIMER_REAL, sec)
     try:
         return func(*args, **kwargs)
     finally:
-        signal.alarm(0)
+        signal.setitimer(signal.ITIMER_REAL, 0)
