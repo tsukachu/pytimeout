@@ -8,3 +8,5 @@ script: coverage run tests/test_pytimeout.py
 after_success:
   - coverage run setup.py test
   - codeclimate-test-reporter
+notifications:
+  email: false
