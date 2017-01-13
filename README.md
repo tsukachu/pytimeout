@@ -7,7 +7,7 @@ This package provides developers with a minimal timeout handling.
 If time is exceeded, raise TimeoutError.  
 
 ## Usage
-pytest contains two functions.  
+pytimeout contains two functions.  
 timeout() is a decorator. Add timeout when defining function.  
 with_run() add a timeout when calling an already defined function.  
 
