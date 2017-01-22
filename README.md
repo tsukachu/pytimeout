@@ -1,5 +1,6 @@
 # pytimeout
 [![Build Status](https://travis-ci.org/tsukachu/pytimeout.svg?branch=master)](https://travis-ci.org/tsukachu/pytimeout)
+[![Code Climate](https://codeclimate.com/github/tsukachu/pytimeout/badges/gpa.svg)](https://codeclimate.com/github/tsukachu/pytimeout)
 [![Test Coverage](https://codeclimate.com/github/tsukachu/pytimeout/badges/coverage.svg)](https://codeclimate.com/github/tsukachu/pytimeout/coverage)
 
 ## Description
