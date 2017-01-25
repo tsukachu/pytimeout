@@ -37,4 +37,5 @@ setup(
     extras_require={
         'testing': tests_require,
     },
+    test_suite='tests',
 )
